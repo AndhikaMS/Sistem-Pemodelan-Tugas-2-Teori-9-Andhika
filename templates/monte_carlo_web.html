@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementasi Monte Carlo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1>Implementasi Monte Carlo terhadap Prediksi Produksi Susu Segar di Indonesia</h1>
+        <nav>
+            <ul>
+                <li><a href="#" class="tab-link" data-tab="tentang">Tentang Saya</a></li>
+                <li><a href="#" class="tab-link" data-tab="data">Data</a></li>
+                <li><a href="#" class="tab-link" data-tab="implementasi">Implementasi Monte Carlo</a></li>
+                <li><a href="#" class="tab-link" data-tab="hasil">Hasil Prediksi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten Tab -->
+    <main>
+        <div id="tentang" class="tab-content">
+            <h2>Tentang Saya</h2>
+            <p>Metode Monte Carlo adalah metode simulasi probabilitas yang sering digunakan dalam pengambilan keputusan dan prediksi. Dalam konteks produksi susu segar, metode ini dapat membantu memproyeksikan tren produksi berdasarkan data historis.</p>
+            <p>Produksi susu segar di Indonesia selama 3 tahun terakhir mengalami fluktuasi yang dipengaruhi oleh berbagai faktor seperti cuaca, kualitas pakan, dan manajemen peternakan.</p>
+	    <p>Ditujukan untuk memenuhi tugas mata kuliah Sistem Pemodelan dan Simulasi.</p>
+	    <p>Teknik Informatika, Semester 5</p>
+ 	    <p>Universitas Bale Bandung</p>
+	    <p>Andhika Maulana Shiddiq (301220024)</p>
+	
+        </div>
+        <div id="data" class="tab-content" style="display: none;">
+            <h2>Data Produksi Susu Segar di Indonesia</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tahun</th>
+                        <th>Produksi (Ton)</th>
+                    </tr>
+                </thead>
+                <tbody id="data-table-body">
+                    <!-- Data akan diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <div id="implementasi" class="tab-content" style="display: none;">
+    <h2>Implementasi Monte Carlo</h2>
+    
+   <h3>Hitung Interval</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Tahun</th>
+                <th>Produksi (Ton)</th>
+                <th>Probabilitas</th>
+                <th>Kumulatif</th>
+                <th>Interval</th>
+            </tr>
+        </thead>
+        <tbody id="interval-table">
+            <!-- Isi tabel ini akan di-generate dari JavaScript -->
+        </tbody>
+    </table>
+
+    <h3>Generate Bilangan Acak</h3>
+
+    <!-- Area untuk menampilkan hasil -->
+    <div id="rng-result"></div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Zi</th>
+                <th>(a*Zi) + C</th>
+                <th>((a*Zi) + C) mod m</th>
+                <th>Angka Tiga Digit</th>
+            </tr>
+        </thead>
+        <tbody id="rng-table">
+            <!-- Isi tabel ini akan di-generate dari JavaScript -->
+        </tbody>
+    </table>
+ </table>
+</div>
+
+        <div id="hasil" class="tab-content" style="display: none;">
+            <h2>Hasil Prediksi</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tahun</th>
+                        <th>Produksi (Ton)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Hasil prediksi akan ditampilkan di sini -->
+                </tbody>
+            </table>
+        </div>
+	
+
+    </main>
+</body>
